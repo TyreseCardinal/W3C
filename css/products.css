@@ -41,6 +41,7 @@ footer {
 
 #header-container>img {
   justify-self: start;
+  border-radius: 25px;
 }
 
 /* Main Selectors */
@@ -112,5 +113,58 @@ footer {
   grid-template-rows: 1fr;
   gap: 2px;
   padding: 2px;
+}
 
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.scale-in {
+  animation: scaleIn 5s ease-out;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out infinite;
 }
